@@ -1,12 +1,12 @@
 :root {
   --primary: #6cdb4d;
-  --primary-light: #72ff82;
+  --primary-light: #526e56;
   --secondary: #7209b7;
   --success: #4cc9f0;
   --danger: #f72585;
   --warning: #f8961e;
   --info: #4895ef;
-  --dark: #1a1a2e;
+  --dark: #aff1c8;
   --light: #f8f9fa;
   --border: #e9ecef;
   --text: #2d3748;
@@ -66,20 +66,23 @@ body {
 .logo {
   display: flex;
   align-items: center; /* Vertically center image and text */
-  gap: 1px; /* Space between the image and text */
+  gap: 2px; /* Space between the image and text */
   justify-content: center;
+  padding: 10px 16px;
+  font-size: 14px;
+  margin-right: 12px;
 }
 
-.logo img {
-  height: 50px; /* or whatever size fits your layout */
-  width: 50px;
+.logo-img {
+  height: 70px; /* or whatever size fits your layout */
+  width: 70px;
 }
 
 /* Sidebar */
 .sidebar {
   grid-row: 1 / 3;
   background: linear-gradient(180deg, var(--dark) 0%, #16213e 100%);
-  color: white;
+  color: black;
   overflow-y: auto;
   transition: var(--transition);
   box-shadow: var(--shadow);

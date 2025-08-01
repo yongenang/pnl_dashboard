@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - TKT Nature</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Comfortaa", sans-serif;
+      background-color: #f5f7fb;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .login-container {
+      background: linear-gradient(180deg, #dbf6d3, #46b052);
+      padding: 40px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding-top: 20px;
+    
+    }
+    
+    .login-logo {
+      width: 60%;
+      height: 60%;
+      margin-top: -5px;
+    }
+
+    .login-container h2 {
+      margin-bottom: 40px;
+      color: #0b0b0b;
+      font-size: 40px;
+      margin-top: -10px;
+      
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      text-align: left;
+      position: relative;
+
+    }
+
+    .input-group i{
+      position: absolute;
+      right: 20px;
+      top: 38px;
+      cursor: pointer;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .input-group input {
+      width: 90%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 15px;
+      background-color: #e1ded1f7;
+      
+    }
+
+    .login-btn {
+      width: auto;
+      padding: 10px 22px;
+      border: none;
+      background-color: #10150f;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 100px;
+      margin-top: 80px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #657960;
+    }
+  </style>
+</head>
+<body>
+ 
+  <div class="login-container">
+    <img src="logo.png" alt="Company-logo" class="login-logo">
+    <div class="form-body">
+        <h2>User Login</h2>
+      <form id="loginForm">
+        <div class="input-group">
+            <label for="username">Email or Username</label>
+            <input type="text" placeholder="xxx@gmail.com or xxx" id="username" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <i class="fas fa-eye" id="togglePassword" style="cursor: pointer"></i>
+        </div>
+       <button type="submit" class="login-btn">LOG IN</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="javascript/login.js"></script>
+</body>
+</html>
 

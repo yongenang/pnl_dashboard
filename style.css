@@ -1,6 +1,6 @@
 :root {
-  --primary: #6cdb4d;
-  --primary-light: #526e56;
+  --primary: #395f2f;
+  --primary-light: #5dd236;
   --secondary: #7209b7;
   --success: #4cc9f0;
   --danger: #f72585;
@@ -107,10 +107,12 @@ body {
   margin-bottom: 10px;
 }
 
+.logo h1{
+  color: black;
+}
 
 .logo span {
-  color: var(--primary-light);
-  background: linear-gradient(45deg, var(--primary-light), var(--success));
+  background: linear-gradient(90deg, rgb(16, 115, 16) , rgb(101, 136, 101));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -127,7 +129,7 @@ body {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(31, 67, 117);
   font-weight: 500;
 }
 
@@ -167,7 +169,7 @@ body {
 .nav-item:hover,
 .nav-item.active {
   background-color: rgba(255, 255, 255, 0.07);
-  border-left-color: var(--primary-light);
+  border-left-color: lightyellow;
 }
 
 .nav-item.active {
@@ -332,6 +334,7 @@ body {
   grid-column: 2;
   padding: 25px 30px;
   overflow-y: auto;
+  background-color: rgb(202, 221, 190);
 }
 
 .page-title {
@@ -345,7 +348,7 @@ body {
 .title {
   font-size: 28px;
   font-weight: 700;
-  color: var(--dark);
+  color: darkgreen;
   position: relative;
   padding-bottom: 10px;
 }
@@ -668,9 +671,9 @@ body {
 }
 
 .btn-outline {
-  border: 2px solid var(--primary-light);
+  border: 2px solid grey;
   color: var(--primary);
-  background-color: transparent;
+  background-color: rgb(240, 242, 219);
 }
 
 .btn-outline:hover {

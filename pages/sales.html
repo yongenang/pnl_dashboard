@@ -17,7 +17,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sales.css') }}"/>
   </head>
 
   <body>
@@ -93,8 +94,24 @@
           </div>
         </div>
       </div>
-    </div>
+      <!--Chart section-->
+      <div class="sales-container">
+        <h1>Monthly Sales Overview (Shopify)</h1>
+        <label for="monthSelect">Select Month:</label>
+        <select id="monthSelect"></select>
+        <button id="generate-chart">Generate Chart</button>
 
-   <script src="../javascript/linking.js"></script>
+        <div id="chartContainer" class="chart-container" style="visibility: hidden;">
+          <canvas id="salesChart"></canvas>
+        </div>
+
+        <div id="salesRecords" class="sales-records"></div>
+      </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='linking.js') }}"></script>
+    <script src="{{ url_for('static', filename='sales.js') }}"></script>  
   </body>
 </html>

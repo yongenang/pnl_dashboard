@@ -17,7 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../static/style.css"/>
+
+    <style>
+     
+
+    </style>
   </head>
 
   <body>
@@ -93,16 +98,22 @@
           </div>
         </div>
       </div>
+      <!-- Upload Section -->
       <div class="upload-container">
         <h2>Upload files here</h2>
-        <form id="uploadForm" enctype="multipart/form-data"></form>
-          <input type="file "name="file" id="fileInput" accept=".xlxs" required/>
-          <button type="Submit" class="upload-btn">Upload</button>
+        <form id="uploadForm" enctype="multipart/form-data" method="POST" action="/upload">
+          <input type="file" name="file" id="fileInput" accept=".xlsx" required />
+
+          <div class="upload-action">
+            <button type="button" class="remove-btn" id="removeBtn">Remove file</button>
+            <button type="button" class="generate-btn" id="generateBtn">Generate</button>
+          </div>
         </form>
       </div>
     </div>
 
   
    <script src="../javascript/linking.js"></script>
+   <script src="../javascipt/upload.js"></script>
   </body>
 </html>

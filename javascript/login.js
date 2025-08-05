@@ -2,7 +2,7 @@
 
 document.getElementById("loginForm").addEventListener("submit", function(e) {
       e.preventDefault();
-      window.location.href = "pages/dboard.html";
+      window.location.href = "templates/dboard.html";
 });
 
 document.addEventListener("DOMContentLoaded", function () {

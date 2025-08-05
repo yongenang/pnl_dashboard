@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TKT Nature Online</title>
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sales.css') }}"/>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <img src="../assets/logo.png" alt="Logo" class="logo-img" />
+          <h1>Admin<span>Panel</span></h1>
+        </div>
+        <div class="nav-menu">
+          <div class="menu-heading">Main</div> 
+
+          <div class="nav-item" id="showDashboard">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <span>Dashboard</span>
+          </div>
+         
+          <div class="nav-item" id="dataUpload">
+            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            <span>Data Upload</span>
+          </div>
+
+          <div class="menu-heading">Reports</div>
+
+          <div class="nav-item" id="dataAnal">
+            <i class="fas fa-chart-line"></i>
+            <span>Analytics</span>
+          </div>
+          <div class="nav-item active" id="dataSales">
+            <i class="fas fa-coins"></i>
+            <span>Sales</span>
+          </div>
+
+          <div class="menu-heading">Admin</div>
+
+          <div class="nav-item" id="dataSet">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </div>
+          <div class="nav-item" id="dataNotify">
+            <i class="fas fa-bell"></i>
+            <span>Notifications</span>
+          </div>
+          <div class="nav-item" id="dataSecurity">
+            <i class="fas fa-shield-alt"></i>
+            <span>Security</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <div class="header">
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div class="header-actions">
+          <div class="notification">
+            <i class="fas fa-bell"></i>
+            <div class="badge">3</div>
+          </div>
+          <div class="notification">
+            <i class="fas fa-envelope"></i>
+            <div class="badge">5</div>
+          </div>
+          <div class="user-profile">
+            <div class="profile-img">JD</div>
+            <div class="user-info">
+              <div class="user-name">John Doe</div>
+              <div class="user-role">Administrator</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Chart section-->
+      <div class="sales-container">
+        <h1>Monthly Sales Overview (Shopify)</h1>
+        <label for="monthSelect">Select Month:</label>
+        <select id="monthSelect"></select>
+        <button id="generate-chart">Generate Chart</button>
+
+        <div id="chartContainer" class="chart-container" style="visibility: hidden;">
+          <canvas id="salesChart"></canvas>
+        </div>
+
+        <div id="salesRecords" class="sales-records"></div>
+      </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='linking.js') }}"></script>
+    <script src="{{ url_for('static', filename='sales.js') }}"></script>  
+  </body>
+</html>

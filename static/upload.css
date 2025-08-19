@@ -189,20 +189,21 @@
 }
 
 .value-container label {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 15px;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   font-weight: 500;
+  padding: 8px 0;
 }
 
 .value-container input[type="number"], 
 .value-container select {
-  width: 120px; /* Tighter width instead of 100% */
+  width: 100%; /* Full width within the grid column */
   padding: 8px 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
-  margin-top: 4px;
   font-size: 14px;
   text-align: right; /* Right-align numbers for better readability */
 }
@@ -231,20 +232,33 @@
 /* Extra Expenses Container */
 .extra-expense-item {
   margin-bottom: 8px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 15px;
   align-items: center;
+  padding: 8px 0;
 }
 
 .month-selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.month-selection label {
   display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  text-align: center;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 500;
 }
 
 .month-selection select {
-  min-width: 120px;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
 /* ------------------ SCROLLABLE DROPDOWN ------------------ */
@@ -274,25 +288,23 @@ select {
     width: 95%;
   }
   
-  .value-container input[type="number"], 
-  .value-container select {
-    width: 100px; /* Even tighter on mobile */
-  }
-  
   .value-container label {
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: 1fr;
     gap: 8px;
   }
   
+  .value-container input[type="number"], 
+  .value-container select {
+    width: 100%;
+  }
+  
   .extra-expense-item {
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: 1fr;
     gap: 8px;
   }
   
   .month-selection {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 15px;
   }
   
